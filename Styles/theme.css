@@ -1,0 +1,56 @@
+@media print {
+  @page {
+    margin: 0.5in;
+  }
+  .nav-sub {
+    display: none;
+  }
+  #cms-admin-footer {
+    display: none;
+  }
+  a[href]:after {
+    content: "" !important;
+  }
+}
+/*
+    Rock Theme Styles
+
+    1. HTML Overrides
+    2. Bootstrap Overrides
+    3. Theme Styling
+    4. Responsive Overrides
+
+*/
+html {
+  -webkit-font-smoothing: antialiased;
+}
+select {
+  text-rendering: auto;
+  -webkit-font-smoothing: none;
+}
+main {
+  display: block;
+}
+.navbar {
+  position: static;
+}
+.navbar .navbar-toggle {
+  padding: 6px 10px;
+}
+a:hover i.fs {
+  text-decoration: none;
+}
+h1.pagetitle:empty {
+  display: none;
+}
+.page-icon {
+  display: none;
+}
+header .page-menu,
+header .login-status {
+  float: right;
+}
+header .navbar {
+  border: 0;
+}
+/*# sourceMappingURL=theme.css.map */
