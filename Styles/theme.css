@@ -16949,7 +16949,7 @@ body {
   position: absolute;
   top: 0;
   z-index: -1;
-  background: linear-gradient(180deg, #000000 0%, #000000 50%, #000000 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
 }
 #wrapper-navbar #main-nav .navbar-brand.custom-logo-link img {
   height: 72px;
