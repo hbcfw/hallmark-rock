@@ -16706,7 +16706,7 @@ h5,
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background: #58595B;
-  background: linear-gradient(40deg, #58595b, rgba(88, 89, 91, 0.75));
+  background: linear-gradient(40deg, #58595b, #58595b);
   margin-bottom: -9em;
   transition: all 0.3s ease-in-out;
 }
@@ -16949,7 +16949,7 @@ body {
   position: absolute;
   top: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(180deg, #000000 0%, #000000 50%, #000000 100%);
 }
 #wrapper-navbar #main-nav .navbar-brand.custom-logo-link img {
   height: 72px;
