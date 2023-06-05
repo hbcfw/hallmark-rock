@@ -120,6 +120,7 @@
 
             </form>
 
+            <script src="https://kit.fontawesome.com/6c6e946eb9.js" crossorigin="anonymous"></script>
             <script>
                 Sys.Application.add_load(HandleBackForwardCache);
 
