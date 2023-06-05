@@ -16706,7 +16706,7 @@ h5,
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background: #58595B;
-  background: linear-gradient(40deg, #58595b, #58595b);
+  background: linear-gradient(40deg, #58595b, rgba(88, 89, 91, 0.75));
   margin-bottom: -9em;
   transition: all 0.3s ease-in-out;
 }
