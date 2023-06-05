@@ -45,26 +45,24 @@
 
                 <!-- Page Header -->
                 <header>
-
                     <!-- Brand Bar -->
-                    <nav class="navbar navbar-inverse navbar-static-top">
+                    <nav class="navbar navbar-dark bg-dark">
                         <div class="container">
-                            <div class="navbar-header">
-                                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <i class="fa fa-bars"></i>
+                            <div class="navbar-brand">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
                                 </button>
                                 <Rock:Zone Name="Header" runat="server" />
                             </div>
-                            <div class="navbar-collapse collapse">
+                            <div class="collapse navbar-collapse" id="navbarCollapse">
                                 <!-- Main Navigation -->
-                                <div class="pull-right">
+                                <div class="ms-auto">
                                     <Rock:Zone Name="Login" runat="server" />
                                 </div>
                                 <Rock:Zone Name="Navigation" runat="server" />
                             </div>
                         </div>
                     </nav>
-
                 </header>
 
                 <asp:ContentPlaceHolder ID="feature" runat="server"></asp:ContentPlaceHolder>
