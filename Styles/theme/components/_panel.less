@@ -1,0 +1,36 @@
+/* Panels are a Bootstrap 3 component but they are currently deeply integrated with Rock, so we need to provide some styling.
+ * We are currently using the Bootstrap 5 styles with the panel classes from Bootstrap 3. */
+
+// Define some Bootstrap 5 card-like variables
+@card-bg: #fff;
+@card-border-color: rgba(0, 0, 0, .125);
+@card-border-width: 1px;
+@card-border-radius: .25rem;
+@card-padding: 1rem;
+
+.panel {
+    border: @card-border-width solid @card-border-color;
+    border-radius: @card-border-radius;
+    .panel-body {
+        padding: @card-padding;
+    }
+}
+
+.panel-default {
+    background-color: @card-bg;
+    border-color: @card-border-color;
+}
+
+.panel-heading {
+    border-bottom: @card-border-width solid @card-border-color;
+    border-top-left-radius: @card-border-radius;
+    border-top-right-radius: @card-border-radius;
+}
+
+.panel-footer {
+    padding: @card-padding;
+    background-color: @card-bg;
+    border-top: @card-border-width solid @card-border-color;
+    border-bottom-left-radius: @card-border-radius;
+    border-bottom-right-radius: @card-border-radius;
+}
