@@ -11025,20 +11025,20 @@ iframe.file-browser {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
 }
 .card > hr {
   margin-right: 0;
   margin-left: 0;
 }
 .card > .list-group:first-child .list-group-item:first-child {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 .card > .list-group:last-child .list-group-item:last-child {
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 .card-body {
   flex: 1 1 auto;
@@ -11067,10 +11067,10 @@ iframe.file-browser {
   margin-top: 0;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-header:first-child {
-  border-radius: calc(4px - 1px) calc(4px - 1px) 0 0;
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 .card-header + .list-group .list-group-item:first-child {
   border-top: 0;
@@ -11078,10 +11078,10 @@ iframe.file-browser {
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid #ddd;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-footer:last-child {
-  border-radius: 0 0 calc(4px - 1px) calc(4px - 1px);
+  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
 }
 .card-header-tabs {
   display: flex;
@@ -11111,13 +11111,13 @@ iframe.file-browser {
 }
 .card-img,
 .card-img-top {
-  border-top-left-radius: calc(4px - 1px);
-  border-top-right-radius: calc(4px - 1px);
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
 }
 .card-img,
 .card-img-bottom {
-  border-bottom-right-radius: calc(4px - 1px);
-  border-bottom-left-radius: calc(4px - 1px);
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
 }
 .card-deck .card {
   margin-bottom: 15px;
@@ -16768,6 +16768,31 @@ h5,
 .is-style-scripture-card .card-reference {
   font-weight: 500;
   text-transform: uppercase;
+}
+/* Panels are a Bootstrap 3 component but they are currently deeply integrated with Rock, so we need to provide some styling.
+ * We are currently using the Bootstrap 5 styles with the panel classes from Bootstrap 3. */
+.panel {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.panel .panel-body {
+  padding: 1rem;
+}
+.panel-default {
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.125);
+}
+.panel-heading {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.panel-footer {
+  padding: 1rem;
+  background-color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 .wp-block-hallmark-hero {
   position: relative;
