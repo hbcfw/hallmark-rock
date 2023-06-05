@@ -44,25 +44,23 @@
             <form id="form1" runat="server">
 
                 <!-- Page Header -->
-                <header>
-                    <!-- Brand Bar -->
-                    <nav class="navbar navbar-dark bg-dark">
-                        <div class="container">
-                            <div class="navbar-brand">
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <Rock:Zone Name="Header" runat="server" />
-                            </div>
-                            <div class="collapse navbar-collapse" id="navbarCollapse">
-                                <!-- Main Navigation -->
-                                <div class="ms-auto">
-                                    <Rock:Zone Name="Login" runat="server" />
-                                </div>
+                <header class="p-3 mb-3 border-bottom">
+                    <div class="container">
+                        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                            <Rock:Zone Name="Header" runat="server" />
+
+                            <ul class="nav col-12 col-lg-auto ms-lg-auto mb-2 justify-content-center mb-md-0 me-md-3">
                                 <Rock:Zone Name="Navigation" runat="server" />
+                            </ul>
+
+                            <div class="dropdown text-end">
+                                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="{{ CurrentPerson.PhotoUrl }}&maxwidth=200&maxheight=200" alt="mdo" width="32" height="32" class="rounded-circle">
+                                </a>
+                                <Rock:Zone Name="Login" runat="server" />
                             </div>
                         </div>
-                    </nav>
+                    </div>
                 </header>
 
                 <asp:ContentPlaceHolder ID="feature" runat="server"></asp:ContentPlaceHolder>
