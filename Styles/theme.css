@@ -16941,16 +16941,6 @@ body {
   z-index: 100;
   transition: all 0.3s ease-in-out;
 }
-#wrapper-navbar::after {
-  width: 100%;
-  height: 100%;
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
-}
 #wrapper-navbar #main-nav .navbar-brand.custom-logo-link img {
   height: 72px;
   width: auto;

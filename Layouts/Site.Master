@@ -44,44 +44,28 @@
             <form id="form1" runat="server">
 
                 <!-- Page Header -->
+                <header>
 
-                <header id="wrapper-navbar">
-
-                    <nav id="main-nav" class="navbar navbar-expand-md navbar-light" aria-labelledby="main-nav-label">
-
-                        <h2 id="main-nav-label" class="screen-reader-text">Main Navigation</h2>
-
+                    <!-- Brand Bar -->
+                    <nav class="navbar navbar-inverse navbar-static-top">
                         <div class="container">
-                            <!-- Logo goes here -->
-
-                            <Rock:Zone Name="Header" runat="server" />
-
-                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#navbarNavOffcanvas" aria-controls="navbarNavOffcanvas"
-                                aria-expanded="false" aria-label="Open menu">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="navbarNavOffcanvas">
-
-                                <div class="offcanvas-header justify-content-end">
-                                    <button class="btn-close btn-close-white text-reset" type="button"
-                                        data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
-                                </div><!-- .offcancas-header -->
-
-                                <!-- The WordPress Menu goes here -->
-                                <div class="offcanvas-body">
+                            <div class="navbar-header">
+                                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                                <Rock:Zone Name="Header" runat="server" />
+                            </div>
+                            <div class="navbar-collapse collapse">
+                                <!-- Main Navigation -->
+                                <div class="pull-right">
                                     <Rock:Zone Name="Login" runat="server" />
-                                    <Rock:Zone Name="Navigation" runat="server" />
                                 </div>
+                                <Rock:Zone Name="Navigation" runat="server" />
+                            </div>
+                        </div>
+                    </nav>
 
-                            </div><!-- .offcanvas -->
-
-                        </div><!-- .container(-fluid) -->
-
-                    </nav><!-- #main-nav -->
-
-                </header><!-- #wrapper-navbar -->
+                </header>
 
                 <asp:ContentPlaceHolder ID="feature" runat="server"></asp:ContentPlaceHolder>
 
