@@ -1,0 +1,109 @@
+/* Cover Block */
+.wp-block-cover {
+   .wp-block-buttons {
+      margin-top: 30px;
+   }
+
+   &.is-style-hallmark-gradient {
+      .has-background-dim:not([class*=-background-color]) {
+         opacity: 1;
+         background: rgb(9, 98, 136);
+         background: linear-gradient(0deg, rgba(9, 98, 136, 1) 0%, rgba(9, 98, 136, 0.75) 50%, rgba(9, 98, 136, 0) 100%);
+      }
+   }
+}
+
+/* Group Block */
+.wp-block-group {
+   &.has-background {
+      padding: 1.25em 2.375em;
+      &:not(.has-white-background-color) {
+         color: #fff;
+      }
+   }
+}
+
+/* Button Block */
+.btn,
+.wp-block-buttons .wp-block-button .wp-block-button__link {
+    text-transform: uppercase;
+    font-size: 0.85em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0.625em 1.5em;
+    border-radius: @border-radius-buttons;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: @gray; 
+      color: #fff;
+    }
+
+    &.has-dark-blue-background-color {
+      &:hover {
+         background-color: @blue !important;
+         color: #fff
+      }
+    }
+    &.has-blue-background-color {
+      &:hover {
+         background-color: @blue_dark !important;
+         color: #fff
+      }
+    }
+    &.has-teal-background-color {
+      &:hover {
+         background-color: @blue !important;
+         color: #fff
+      }
+    }
+    &.has-light-blue-background-color {
+      color: @gray-900;
+      &:hover {
+         background-color: @gray-900 !important;
+         color: @blue_light;
+      }
+    }
+    &.has-gray-background-color {
+      &:hover {
+         background-color: @gray-900 !important;
+      }
+    }
+    &.has-white-background-color {
+      color: @gray-900;
+      &:hover {
+         color: @blue_dark;
+      }
+    }
+}
+
+.wp-block-buttons {
+   .wp-block-button {
+
+     
+   }
+}
+
+/* Country List */
+.wp-block-hallmark-country-list {
+   ul {
+     margin: 0;
+     padding: 0;
+ 
+     li {
+       list-style-type: none;
+       margin-bottom: 1em;
+ 
+       .flag {
+         max-width: 40px;
+         margin-right: 5px;
+       }
+     }
+   }
+ 
+   &.is-style-columns {
+     columns: 2;
+     -webkit-columns: 2;
+     -moz-columns: 2;
+   }
+ }

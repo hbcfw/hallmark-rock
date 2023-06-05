@@ -1,0 +1,346 @@
+.card {
+   /* General */
+   border: none;
+   transition: all 0.3s ease-in-out;
+   margin-bottom: 1em;
+   
+   a {
+       &.card-link {
+           text-decoration: none;
+           color: var(--bs-body-color);
+       }
+   }
+
+   .card-body {
+       padding: 1.5em;
+       .card-meta {
+           text-transform: uppercase;
+           font-size: 0.625em;
+           color: @gray;
+           &.top {
+               margin: 0px 0px 5px 0px;
+           }
+           &.bottom {
+               margin: 0;
+           }
+           .date {
+               border-right: 1px solid;
+               padding: 0px 10px 0px 0px;
+               margin: 0px 5px 0px 0px;
+           }
+
+       }
+       .card-title {
+           font-weight: 500;
+           font-size: 1.35em;
+           margin-bottom: 0.5em;
+           line-height: 1.1em;
+           transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+       }
+       .card-subtitle {
+           font-weight: 400;
+           font-size: 1em;
+           margin-bottom: 0px;
+           line-height: 1.15em;
+       }
+
+       .btn {
+           background-color: transparent;
+           border: 2px solid;
+           color: inherit;
+           margin-top: 1.25em;
+       }
+
+   }
+
+   /* Audio */
+
+   /* Downloadable Resource */
+
+   /* Events */
+
+
+
+   /* Quote */
+
+   /* Video */
+
+   &:hover {
+       box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+       transform: translateY(-5px);
+
+       .card-body {
+           .btn {
+               &.btn-primary {
+                   color: #fff;
+                   background-color: @blue_dark;
+               }
+           }
+       }
+   }
+
+   &:active,
+   &:focus {
+       .card-body {
+           .card-title {
+               color: @blue_dark;
+           }
+       }
+   }
+}
+
+/* Sermons */
+.is-style-sermon-card {
+   .card-body {
+       .card-title {
+           margin-bottom: 0.25em;
+       }
+   }
+}
+
+/* Stories */
+.is-style-story-card {
+   .card {
+       &.story {
+           height: 100%;
+           min-height: 740px;
+           max-height: 90vh;
+           border-radius: @border-radius;
+           overflow: hidden;
+   
+           .card-link {
+               position: absolute;
+               top: 0;
+               height: 100%;
+               width: 100%;
+   
+               &::after {
+                   width: 100%;
+                   height: 100%;
+                   content: '';
+                   display: block;
+                   position: absolute;
+                   top: 0;
+                   z-index: 0;
+                   background: rgb(33, 37, 41);
+                   background: linear-gradient(0deg, rgba(33, 37, 41, 1) 0%, rgba(33, 37, 41, 0.75) 50%, rgba(9, 98, 136, 0) 100%);
+                   transition: all 0.3s ease-in-out;
+               }
+           }
+   
+           .card-img-top {
+               object-fit: cover;
+               width: 100%;
+               height: 100%;
+           }
+   
+           .card-body {
+               position: absolute;
+               z-index: 1;
+               bottom: 0;
+               top: auto;
+               width: 100%;
+               height: auto;
+               border-bottom-left-radius: @border-radius;
+               border-bottom-right-radius: @border-radius;
+               color: @white;
+   
+               .card-title {
+                   font-size: 2.25rem;
+                   margin-bottom: 1rem;
+                   line-height: 1em;
+               }
+   
+               .btn {
+                   background: transparent;
+                   border: 2px solid;
+                   padding-left: 1.5rem;
+                   padding-right: 1.5rem;
+               }
+           }
+   
+           &:hover {
+               .card-link {
+                   &::after {
+                       background: rgb(9, 98, 136);
+                       background: linear-gradient(0deg, rgba(9, 98, 136, 1) 0%, rgba(9, 98, 136, 0.75) 50%, rgba(9, 98, 136, 0) 100%);
+                   }
+               }
+   
+               .card-body {    
+                   .btn {
+                       background: #fff;
+                       color:rgb(9, 98, 136);
+                       border-color: #fff;
+                   }
+               }
+   
+           }
+
+           .card-link.video-player--playing {
+               &::after {
+                   display: none;
+               }
+               .card-body {
+                   display: none;
+               }
+           }
+       }
+   }
+
+   /* container */
+
+ .video-player {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0em auto;
+   aspect-ratio: 16 / 9;
+   background-size: cover;
+   background-repeat: no-repeat;;
+   background-position: center center;
+   cursor: pointer;
+   top: 0;
+   z-index: 0;
+   width: 100%;
+   height: 100%;
+ }
+
+ /* play button */
+
+ .video-player > a {
+   transition: 0.25s ease-in-out;
+   width: 64px;
+   height: 48px;
+   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAwCAYAAAChS3wfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyVpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM2MCwgMjAyMC8wMi8xMy0wMTowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzdCMjkyRjk3NTNEMTFFREJCMUFCMzU5MUYyMjgxQzIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzdCMjkyRkE3NTNEMTFFREJCMUFCMzU5MUYyMjgxQzIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3N0IyOTJGNzc1M0QxMUVEQkIxQUIzNTkxRjIyODFDMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3N0IyOTJGODc1M0QxMUVEQkIxQUIzNTkxRjIyODFDMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnhRufQAAAWtSURBVHja5FtNiBRHFH71urp7ZvbPrMu6/iSuCEYD6iF4iZCgx5wkCAGDOZoQDwnEmzkk4lkThAghR4mHgDEeBQkYD4knBTEYjcEf3FXjrvs/3V0/+aqmR9ddlRy2dzo7Ba+ru6a3qt573/up6lpxa/NmahYjJQVJQh1RRHVmMpOTJKVckVarAybLlgshegTRMkvUkd9XtbUdTFQjIWJrbRXdxGRtLKwNLbN7roEqvp0ozEnmxM2hQRqkckpBSU4zoGlQ5p6tEHXWegZjp1rKaVZqCuPVbRiOW2Mm8M44Mz/mLBtB+wMVRXcCrQnPZGs10qj7u7qoWsGU0C5pTnEzAlOvgplPdKXyrhZiIykVgWH/u83fw+9+1qLZZu3TTvAumH+2bYGKcOMGQeMeDNj83jHzZI7GkG60G2HM35jFL4b5e8zodzG3v9kIcJ2xMR+Dsa8h6dh16BgV9P8vThUB8zda688GurupUgU4lQK/kJzBjZMauP1CMx/3zOdaXQrMU45UMP8p0P2zRyZ4JvAs7m/f7uGqZ2Z2JklyjplpKRfbcEJfQclfgkjc3rbN2ywkchNIWEdC0FIvztsGadonlHrE0LzT/nbdJsx7Rw8+JfNHAaIeC3cJgg9EmzDv/QFsP6tU3jc9PeQtHp5+J7VRcX5AZNkWJDMrXBRYiefX20kAHu1Q/djU1FuM2L+pOFFbH2pKiQKXBYbhJg7TdKUtIvQ5KYchqXv3SA0Nwe0GVCYn65M+pVYyUsQVooCU1SK6cBxT/9GjVEWukVy6RGZ8nJzTLYsZIOz3sw7DvkIEAIjpkRHq2ruXVp06RX2HDpGt1ym5cqVhFi1OuNjNLwyXM1vba4sRsa/S69d93XvwIK05d466du+mDG3qzp2WmoXPAq3tZDC/rIhVW1MIsyEfbdxIAydO0MDJkxStX99ys4AAqgwodD9ZUi5S6dy1i9ZcuNByswAKKg4BrxSGgJdJH1pvtVkIL4AgWC5aIIAymAUy4Ihx7S5DWGqRWUjXe7U0Kerim0XgBFC6HZBFNAvB9HSfs3RlnllcvdowiQVEQ+n3v5pm8drFi9R74IBHAmVZ+wjgibdavZqiDRuQWqZ+p7qtBDB99izd3bGDhvftI+7pIRHHCydYovLufKvbt+nR4cM0AWfoTME5x4XeY5BldYKjWEY/PnaM1N27FAL6XutaL3gu5EwgKSPcH8LhOU3HW7Y0wt/CM++KcQhwHxT7ygb3eOtWD3frvuAUOKwTwAhoXRvA/XnL4YzhAR+1CdznOwCiusRlvE3g/pwkgL0AxorMh+0cbbYK7i9YD88w1lkjtpjOvUajwcFSwH2e/TeUPi2tEP8UsiOEBUvQ20vJ5cs0eeYMjR450lq4z7d/J4QRZwIPCzGvamObYWjPHlLDwyTXrm0t3J+jIGHMfSmEGLZFIADLVjs15QcK1+VRtizMuwwI84q1vi8DIf5UBfkAt5MjFnnH+T8DwB2w6uy8wUqpv/B8j9qs+E9jExO/MTf22863E/PuO4hQ6lY0OnqDE9iqYv7RlnldXEBuIuP4NK1aRbI/SRwCTo8zT6ZEnUE7wN8dthTiuI0iYhmGJKPISObPydr2sH8gHr7vWoYoxdzZSVyrUW9Hx3cR809mCQshP9J7UyXJh7peJw30cwUIqAAKEWrkA+/hpW+XlC9wW+iOoNhAyl8Rlt80WVY3aUqoif3+GsgdlXXaD4JgP4fhO7j/AX/24Jm4nqPDvmywVmh1btvsebi0m+gSG7O/xvw2GHzsQiDMwJN8wSLhvCP39RSCeAPIGIRgBv3OkTF9aK+hrTuvG0fgUcO5uLVF8yh8QE+PxAc58ay6Sc0D52ZW3Tw+byBUhb7dc/MofYZnhXb3cSBlIVLMoY77MWocqx8NtJ4wzA8xl6F4evpaJuUf7l8B3PnAuQL7V4ABAE5N/i+TMKf/AAAAAElFTkSuQmCC);
+   background-repeat: no-repeat;
+ }
+ .video-player:hover > a,
+ .video-player > a:focus {
+   transform: scale(1.1);
+ }
+
+ /* video player iframe */
+
+ .video-player > iframe {
+   display: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+ }
+}
+.is-style-standard-card {
+   .card {
+       &.story {
+           height: auto;
+           max-height: none;
+
+           .card-img-top {
+               object-fit: cover;
+               width: 100%;
+               height: auto;
+           }
+
+           .card-body {
+               position: relative;
+               bottom: auto;
+           }
+       }
+   }
+}
+
+/* People */
+.is-style-person-card {
+   .card {
+       .card-up {
+           height: 160px;
+           overflow: hidden;
+           border-top-left-radius: @border-radius;
+           border-top-right-radius: @border-radius;
+           background: @gray;
+           background: linear-gradient(40deg, rgb(88 89 91), rgb(88 89 91 / 75%));;
+           margin-bottom: -9em;
+           transition: all 0.3s ease-in-out;
+       }
+       .card-body {
+           padding-top: 2em;
+           text-align: center;
+   
+           img {
+               &.card-img-profile {
+                   margin: 0px auto 10px;
+                   display: block;
+                   border-radius: 100%;
+                   width: 240px;
+                   height: 240px;
+                   object-fit: cover;
+                   max-width: 100%;
+                   border: 1px solid @gray;
+                   background-color: #fff;
+                   padding: 6px;
+               }
+           }
+           .card-title {
+               margin-bottom: 0em;
+           }
+           .card-text {
+               color: @gray;
+           }
+       }
+
+       &:hover {
+           .card-up {
+               background: linear-gradient(40deg, @blue_dark, @blue);
+           }
+           .card-body {
+               img {
+                   &.card-img-profile {
+                       border-color: @blue_dark;
+                       box-shadow: 0 .125em .25em rgba(0,0,0,.15);
+                   }
+               }
+               .card-text {
+                   color: @gray-900;
+               }
+           }
+       }
+   }
+   
+}
+
+/* Missionaries */
+.is-style-missionary-card {
+   .card-body {
+       .flag {
+           max-width: 26px;
+           max-height: 16px;
+           display: inline-block;
+       }
+       .country-name,
+       .card-subtitle {
+           font-size: 0.8em;
+           color: @gray;
+       }
+   }
+}
+
+/* Scripture */
+.is-style-scripture-card {
+   .card-body {
+       padding-top: 2em;
+       .card-verse {
+           font-weight: 400;
+           font-size: 1em;
+           line-height: 1.33em;
+           text-align: left;
+           margin: 0;
+       }
+   }
+   .card-reference {
+       font-weight: 500;
+       text-transform: uppercase;
+   }
+}
