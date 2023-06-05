@@ -16789,6 +16789,9 @@ h5,
   font-size: 1rem;
   margin-bottom: 0.3125rem;
 }
+.form-group .control-wrapper .form-control {
+  font-weight: 300;
+}
 .form-group .control-wrapper .input-group .input-group-addon {
   background-color: #58595B;
   color: #fff;
@@ -16799,6 +16802,17 @@ h5,
   line-height: 2;
   text-align: center;
   border-radius: 4px 0 0 4px;
+}
+.form-group .control-wrapper select {
+  background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23565973' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e);
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px 12px;
+}
+.form-group .control-wrapper select:focus {
+  border-color: rgba(9, 98, 136, 0.35);
+  outline: 0;
+  box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(9, 98, 136, 0.2);
 }
 /* Panels are a Bootstrap 3 component but they are currently deeply integrated with Rock, so we need to provide some styling.
  * We are currently using the Bootstrap 5 styles with the panel classes from Bootstrap 3. */
