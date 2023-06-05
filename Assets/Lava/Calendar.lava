@@ -1,74 +1,68 @@
-  {% assign eventItemOccurrenceCount = EventItemOccurrences | Size %}
+{% assign eventItemOccurrenceCount = EventItemOccurrences | Size %}
 
-  {% if eventItemOccurrenceCount == 0 %}
-  <div class="panel panel-default margin-t-md">
-    <div class="margin-all-md"> There are no events in this time frame.</div>
-  </div>
-  {% endif %}
+{% if eventItemOccurrenceCount == 0 %}
+<div class="panel panel-default margin-t-md">
+  <div class="margin-all-md"> There are no events in this time frame.</div>
+</div>
+{% endif %}
 
-  {% for eventItemOccurrence in EventItemOccurrences %}
-  <div class="panel panel-default margin-t-md">
-    <div class="panel-heading clearfix">
-      <h2 class="panel-title pull-left">
-        {{ eventItemOccurrence.Name }}
-      </h2>
-      <div class="pull-right">
-        {% if eventItemOccurrence.DetailPage != null %}
-        <a href="{{ eventItemOccurrence.DetailPage }}">
-          View Details <i class="fa fa-chevron-right"></i>
-        </a>
-		{% else %}
-		<a href="{{ DetailsPage }}?EventOccurrenceId={{ eventItemOccurrence.EventItemOccurrence.Id }}">
-            View Details <i class="fa fa-chevron-right"></i>
-        </a>
-        {% endif %}
-      </div>
-    </div>
-    <div class="panel-body">
-      <div class="col-md-2">
-        <div class="row">
-          <strong>Date</strong>
-        </div>
-        <div class="row">
+{% for eventItemOccurrence in EventItemOccurrences %}
+<div class="event-item card card-horizontal h-100 mb-3 card-muted" data-name="{{ eventItemOccurrence.Name }}"
+  data-childcare="true" data-ministry="care" data-timeofday="evening" data-cost="no" data-searchkeys="">
+
+  <div class="position-relative card-img-header bg-primary">
+    <img src="" srcset="" class="card-img-top img-responsive" alt="" itemprop="image" loading="lazy">
+  </div><!-- .card-img-header -->
+
+  <div class="card-body">
+    <div class="d-flex justify-content-between">
+      <div>
+        <h3 class="card-title text-primary">{{ eventItemOccurrence.Name }}</h3>
+        <h5 class="card-subtitle font-weight-semibold">
           {% if eventItemOccurrence.Date != eventItemOccurrence.EndDate %}
-            {{ eventItemOccurrence.Date | Date:'MMM d' }} - {{ eventItemOccurrence.EndDate | Date:'MMM d' }}
+          {{ eventItemOccurrence.Date | Date:'MMM d' }} - {{ eventItemOccurrence.EndDate | Date:'MMM d' }}
           {% else %}
-            {{ eventItemOccurrence.Date | Date:'MMM d' }}
+          {{ eventItemOccurrence.Date | Date:'MMM d' }}
           {% endif %}
-        </div>
-      </div>
-      <div class="col-md-2">
-        <div class="row">
-          <strong>Time</strong>
-        </div>
-        <div class="row">
           {{ eventItemOccurrence.Time }}
-        </div>
+        </h5>
       </div>
-      <div class="col-md-3">
-        <div class="row">
-          <strong>Location</strong>
-        </div>
-        <div class="row">
-          {{ eventItemOccurrence.Location }}
-        </div>
+
+      {% if eventItemOccurrence.DetailPage != null %}
+      <div class="d-none d-sm-flex flex-shrink-0 flex-column">
+        <a href="{{ eventItemOccurrence.DetailPage }}" class="btn btn-action btn-sm stretched-link"
+          rel="rocknofollow">Learn more</a>
       </div>
-      <div class="col-md-4">
-        <div class="row">
-          <strong>Summary</strong>
-        </div>
-        <div class="row">
-          {{ eventItemOccurrence.Summary }}
-        </div>
+      {% else %}
+      <div class="d-none d-sm-flex flex-shrink-0 flex-column">
+        <a href="{{ DetailsPage }}?EventOccurrenceId={{ eventItemOccurrence.EventItemOccurrence.Id }}"
+          class="btn btn-action btn-sm stretched-link" rel="rocknofollow">Learn more</a>
       </div>
+      {% endif %}
+    </div><!-- .justify-content-between -->
+
+    <div class="card-text">
+      {{ eventItemOccurrence.Summary }}
     </div>
-  </div>
-  {% endfor %}
+
+    <span class="info-point info-location">
+      Location:
+      <span class="point-value text-muted">{{ eventItemOccurrence.Location }}</span>
+    </span>
+  </div><!-- .card-body -->
+
+  <div class="card-footer d-sm-none">
+    <a href="{{ DetailsPage }}?EventOccurrenceId={{ eventItemOccurrence.EventItemOccurrence.Id }}"
+      class="btn btn-action btn-sm" rel="rocknofollow">Learn more</a>
+  </div><!-- .card-footer -->
+
+</div><!-- .event-item -->
+{% endfor %}
 
 <script type="text/javascript">
 
-  $( document ).ready(function() {
-  $('.js-group-item').tooltip();
+  $(document).ready(function () {
+    $('.js-group-item').tooltip();
   });
 
 </script>
