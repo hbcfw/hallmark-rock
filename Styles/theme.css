@@ -16530,6 +16530,7 @@ h5,
   /* Events */
   /* Quote */
   /* Video */
+  /* Horizontal */
 }
 .card a.card-link {
   text-decoration: none;
@@ -16584,6 +16585,19 @@ h5,
 .card:active .card-body .card-title,
 .card:focus .card-body .card-title {
   color: #096288;
+}
+.card .card-horizontal {
+  flex-direction: row;
+}
+.card .card-horizontal .card-img-header {
+  flex: 0 0 30%;
+  border-radius: calc(20px - 1px) 0 0 calc(20px - 1px);
+}
+.card .card-horizontal .card-img-header img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 /* Sermons */
 .is-style-sermon-card .card-body .card-title {

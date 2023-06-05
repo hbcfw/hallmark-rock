@@ -87,6 +87,22 @@
            }
        }
    }
+
+   /* Horizontal */
+   .card-horizontal {
+      flex-direction: row;
+
+      .card-img-header {
+         flex: 0 0 30%;
+         border-radius: calc(20px - 1px) 0 0 calc(20px - 1px);
+
+         img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+         }
+      }
+   }
 }
 
 /* Sermons */

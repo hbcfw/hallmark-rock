@@ -10,10 +10,10 @@
 <div class="event-item card card-horizontal mb-3" data-name="{{ eventItemOccurrence.Name }}" data-childcare="true"
   data-ministry="care" data-timeofday="evening" data-cost="no" data-searchkeys="">
 
-  {% if eventItemOccurrence.Photo.Guid %}
+  {% if eventItemOccurrence.EventItemOccurrence.EventItem.Photo.Guid %}
   <div class="position-relative card-img-header bg-primary">
-    <img src="/GetImage.ashx?Guid={{ eventItemOccurrence.Photo.Guid }}" class="card-img-top img-responsive"
-      alt="{{ eventItemOccurrence.Name }} image" itemprop="image" loading="lazy">
+    <img src="/GetImage.ashx?Guid={{ eventItemOccurrence.EventItemOccurrence.EventItem.Photo.Guid }}"
+      class="card-img-top img-responsive" alt="{{ eventItemOccurrence.Name }} image" itemprop="image" loading="lazy">
   </div><!-- .card-img-header -->
   {% endif %}
 
