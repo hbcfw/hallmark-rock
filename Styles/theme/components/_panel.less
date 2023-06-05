@@ -11,8 +11,10 @@
 .panel {
     border: @card-border-width solid @card-border-color;
     border-radius: @card-border-radius;
+    margin-bottom: 20px;
     .panel-body {
         padding: @card-padding;
+        background-color: @card-bg;
     }
 }
 
@@ -22,9 +24,14 @@
 }
 
 .panel-heading {
+   padding: 0.5em 1em 0.5em 1em;
     border-bottom: @card-border-width solid @card-border-color;
     border-top-left-radius: @card-border-radius;
     border-top-right-radius: @card-border-radius;
+
+    .panel-title {
+      font-size: 1em;
+    }
 }
 
 .panel-footer {

@@ -16401,6 +16401,19 @@ h5,
 .is-style-scripture-card .card-body .card-verse {
   font-family: 'Lora', Georgia, 'Times New Roman', Times, serif;
 }
+#site-header {
+  background-color: #fff;
+}
+#site-header .nav li a {
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-decoration: none;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 /* Cover Block */
 .wp-block-cover .wp-block-buttons {
   margin-top: 30px;
@@ -16774,18 +16787,24 @@ h5,
 .panel {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  margin-bottom: 20px;
 }
 .panel .panel-body {
   padding: 1rem;
+  background-color: #fff;
 }
 .panel-default {
   background-color: #fff;
   border-color: rgba(0, 0, 0, 0.125);
 }
 .panel-heading {
+  padding: 0.5em 1em 0.5em 1em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
+}
+.panel-heading .panel-title {
+  font-size: 1em;
 }
 .panel-footer {
   padding: 1rem;
