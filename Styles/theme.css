@@ -16586,14 +16586,14 @@ h5,
 .card:focus .card-body .card-title {
   color: #096288;
 }
-.card .card-horizontal {
+.card.card-horizontal {
   flex-direction: row;
 }
-.card .card-horizontal .card-img-header {
+.card.card-horizontal .card-img-header {
   flex: 0 0 30%;
   border-radius: calc(20px - 1px) 0 0 calc(20px - 1px);
 }
-.card .card-horizontal .card-img-header img {
+.card.card-horizontal .card-img-header img {
   -o-object-fit: cover;
   object-fit: cover;
   height: 100%;
