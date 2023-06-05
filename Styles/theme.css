@@ -16782,6 +16782,24 @@ h5,
   font-weight: 500;
   text-transform: uppercase;
 }
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 0.3125rem;
+}
+.form-group .control-wrapper .input-group .input-group-addon {
+  background-color: #58595B;
+  color: #fff;
+  padding: 0.5em 1em;
+  vertical-align: super;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2;
+  text-align: center;
+  border-radius: 4px 0 0 4px;
+}
 /* Panels are a Bootstrap 3 component but they are currently deeply integrated with Rock, so we need to provide some styling.
  * We are currently using the Bootstrap 5 styles with the panel classes from Bootstrap 3. */
 .panel {
