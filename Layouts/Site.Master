@@ -51,10 +51,10 @@
 
                             <div class="col-12 col-lg-auto ms-lg-auto mb-2 mb-md-0 me-md-3">
                                 <Rock:Zone Name="Navigation" runat="server" />
-                            <div>
+                            </div>
 
                             <Rock:Zone Name="Login" runat="server" />
-                            
+
                         </div>
                     </div>
                 </header>
