@@ -48,17 +48,10 @@
                     <div class="container">
                         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                             <Rock:Zone Name="Header" runat="server" />
+                            
+                            <Rock:Zone Name="Navigation" runat="server" />
 
-                            <ul class="nav col-12 col-lg-auto ms-lg-auto mb-2 justify-content-center mb-md-0 me-md-3">
-                                <Rock:Zone Name="Navigation" runat="server" />
-                            </ul>
-
-                            <div class="dropdown text-end">
-                                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="{{ CurrentPerson.PhotoUrl }}&maxwidth=200&maxheight=200" alt="mdo" width="32" height="32" class="rounded-circle">
-                                </a>
-                                <Rock:Zone Name="Login" runat="server" />
-                            </div>
+                            <Rock:Zone Name="Login" runat="server" />
                         </div>
                     </div>
                 </header>
