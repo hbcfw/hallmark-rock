@@ -7,12 +7,16 @@
 {% endif %}
 
 {% for eventItemOccurrence in EventItemOccurrences %}
-<div class="event-item card card-horizontal h-100 mb-3 card-muted" data-name="{{ eventItemOccurrence.Name }}"
-  data-childcare="true" data-ministry="care" data-timeofday="evening" data-cost="no" data-searchkeys="">
+<div class="event-item card card-horizontal mb-3" data-name="{{ eventItemOccurrence.Name }}" data-childcare="true"
+  data-ministry="care" data-timeofday="evening" data-cost="no" data-searchkeys="">
 
+  {% if Event.Photo.Guid %}
   <div class="position-relative card-img-header bg-primary">
-    <img src="" srcset="" class="card-img-top img-responsive" alt="" itemprop="image" loading="lazy">
+    <img src="/GetImage.ashx?Guid={{ Event.Photo.Guid }}" class="card-img-top img-responsive"
+      alt="{{ eventItemOccurrence.Name }} image" itemprop="image" loading="lazy">
   </div><!-- .card-img-header -->
+  {% endif %}
+
 
   <div class="card-body">
     <div class="d-flex justify-content-between">
